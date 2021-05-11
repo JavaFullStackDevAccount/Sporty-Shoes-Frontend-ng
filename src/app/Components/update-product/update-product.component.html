@@ -1,0 +1,71 @@
+
+<div class="toolbar-bg p-2 container-fluid text-left">
+    <h2>&nbsp;&nbsp;Sporty shoes</h2>
+  </div>
+  
+  <div
+    class="container mt-5 d-flex justify-content-center align-items-center"
+    style="width: 40%"
+  >
+    <form [formGroup]="updateProductFrom" (submit)="updateProductSubmitted()">
+      <p-card header="Update Product">
+        <div class="row">
+          <div class="col-12 mb-3  mt-3">
+            <span class="p-float-label">
+              <input formControlName="productTitle"id="float-input-t" type="text" pInputText class="w-100" />
+              <label for="float-input-t">Product title</label>
+            </span>
+          </div>
+  
+          <div class="col-12 mb-3 mt-3">
+            <span class="p-float-label">
+              <input formControlName="productImageUrl" id="float-input-i" type="text" pInputText class="w-100" />
+              <label for="float-input-i">Product thumbnail image</label>
+            </span>
+          </div>
+  
+          <div class="col-4 mb-3 mt-3">
+            <div class="p-inputgroup">
+              <span class="p-float-label">
+                <input formControlName="productPrice" id="float-input-p" type="number" pInputText class="w-100" />
+                <label for="float-input-p">Price</label>
+              </span>
+              <span class="p-inputgroup-addon"> &#x20B9;</span>
+            </div>
+          </div>
+  
+          <div class="col-8 mb-3 mt-3">
+            <p-dropdown
+              [options]="categories"
+              optionLabel="name"
+              placeholder="Select a category"
+              styleClass="w-100"
+              formControlName="productCategory"
+            ></p-dropdown>
+          </div>
+  
+          <div class="col-12 mb-3 mt-3">
+            <span class="p-float-label">
+              <textarea
+                rows="5"
+                cols="30"
+                pInputTextarea
+                [autoResize]="true"
+                class="w-100"
+                id="float-input-d"
+                formControlName="productDescription"
+              ></textarea>
+              <label for="float-input-d">Product description</label>
+            </span>
+          </div>
+        </div>
+  
+        <div class="footer d-flex justify-content-end">
+          <p-button styleClass="p-button-warning text-white pr-3" type="submit"
+            ><i class="pi pi-eject"></i>&nbsp;&nbsp;Update</p-button
+          >
+        </div>
+      </p-card>
+    </form>
+  </div>
+  

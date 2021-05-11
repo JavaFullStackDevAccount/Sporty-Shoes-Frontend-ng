@@ -1,0 +1,48 @@
+<div class="toolbar-bg p-2 container-fluid text-left">
+  <h2>&nbsp;&nbsp;Sporty shoes</h2>
+</div>
+
+<div class="container mt-5 pt-5 d-flex justify-content-center">
+  <p-card header="Login" class="w-25">
+    <form [formGroup]="loginForm" (submit)="submitForLogin()">
+      <div class="mt-2">
+        <span class="p-float-label">
+          <input
+            id="float-input"
+            type="email"
+            pInputText
+            class="w-100"
+            formControlName="userEmail"
+          />
+          <label for="float-input">Email</label>
+        </span>
+      </div>
+      <div class="mt-4">
+        <span class="p-float-label">
+          <input
+            id="float-input-p"
+            type="password"
+            pInputText
+            class="w-100"
+            formControlName="userPassword"
+          />
+          <label for="float-input-p">Password</label>
+        </span>
+      </div>
+
+      <div class="footer mt-5 pb-0">
+        <div class="row">
+          <div class="col-6 d-flex justify-content-start align-items-center">
+            <a routerLink="/register" class="text-decoration-none"> Register </a>
+          </div>
+
+          <div class="col-6 d-flex justify-content-end">
+            <p-button styleClass="p-button-primary pr-3" type="submit"
+              ><i class="pi pi-sign-in"></i>&nbsp;&nbsp;Login</p-button
+            >
+          </div>
+        </div>
+      </div>
+    </form>
+  </p-card>
+</div>

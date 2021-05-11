@@ -1,0 +1,28 @@
+<div class="toolbar-bg p-2 container-fluid text-left">
+  <h2>&nbsp;&nbsp;Sporty shoes</h2>
+</div>
+
+<div class="container mt-5 pt-5 d-flex justify-content-center">
+  <p-card header="Add category" class="w-50 p-shadow-3" styleClass="p-shadow-3">
+    <form [formGroup]="addCategoryForm" (submit)="submitNewCategoryToAdd()">
+      <div class="mt-2">
+        <span class="p-float-label">
+          <input
+            id="float-input"
+            type="text"
+            pInputText
+            class="w-100"
+            formControlName="categoryName"
+          />
+          <label for="float-input">Category name</label>
+        </span>
+      </div>
+
+      <div class="footer d-flex justify-content-end mt-4">
+        <p-button styleClass="p-button-primary pr-3" type="submit"
+          ><i class="pi pi-check"></i>&nbsp;&nbsp;Done</p-button
+        >
+      </div>
+    </form>
+  </p-card>
+</div>
